@@ -8,11 +8,9 @@
   --muted: #a7abc4;
   --border: #2b3154;
 
-  /* Main LILIM / LAGUNA colors */
   --accent: #8b5cf6;
   --accent-soft: #2e1d5e;
 
-  /* Gemstone colors */
   --gold: #f5c542;
   --blue: #2563eb;
   --green: #16a34a;
@@ -421,6 +419,48 @@ form textarea {
 }
 
 @media (min-width: 600px) {
-  .app { padding-top: 32px; }
-  .modal { align-items: center; }
+  .app {
+    padding-top: 32px;
+  }
+
+  .modal {
+    align-items: center;
+  }
+}
+
+@media (max-width: 599px) {
+  .modal {
+    padding: 8px;
+  }
+
+  .modal-card {
+    width: 100%;
+    max-height: 85vh;
+    padding: 18px;
+    border-radius: 22px;
+  }
+
+  .modal-head {
+    margin-bottom: 16px;
+  }
+
+  .modal-head h2 {
+    font-size: 22px;
+  }
+
+  form {
+    gap: 13px;
+  }
+
+  form textarea {
+    min-height: 180px;
+    max-height: 38vh;
+  }
+
+  .actions {
+    position: sticky;
+    bottom: 0;
+    padding-top: 10px;
+    background: var(--surface);
+  }
 }
