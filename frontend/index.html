@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111827">
+  <title>JCTGBTG - Lyrics</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <main>
+      <section class="hero">
+        <div>
+          <p class="hero-label">Liliw Extension Church</p>
+          <h2>Lyrics<br>Library</h2>
+        </div>
+        <span class="music-note">♪</span>
+      </section>
+
+      <label class="search">
+        <span>⌕</span>
+        <input id="searchInput" type="search" placeholder="Search songs...">
+      </label>
+
+      <section>
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">LIBRARY</p>
+            <h2>All Songs <span id="count">0</span></h2>
+          </div>
+          <button class="sort-btn" id="sortBtn">Recent ↕</button>
+        </div>
+
+        <div id="status" class="status hidden"></div>
+        <div id="songList" class="song-list"></div>
+
+        <div id="emptyState" class="empty hidden">
+          <div class="empty-icon">♪</div>
+          <h3>No songs found</h3>
+          <p>Try another search or add a new song.</p>
+        </div>
+      </section>
+    </main>
+
+    <button class="fab" id="addBtn">＋</button>
+  </div>
+
+  <div class="modal hidden" id="editorModal">
+    <div class="modal-card">
+      <div class="modal-head">
+        <div>
+          <p class="eyebrow" id="editorEyebrow">NEW SONG</p>
+          <h2 id="editorTitle">Add Song</h2>
+        </div>
+        <button class="icon-btn" id="closeEditor">×</button>
+      </div>
+
+      <form id="songForm">
+        <label>Song Title
+          <input id="titleInput" required maxlength="100" placeholder="e.g. Amazing Grace">
+        </label>
+
+        <label>Artist / Composer
+          <input id="artistInput" maxlength="100" placeholder="Optional">
+        </label>
+
+        <label>Lyrics
+          <textarea id="lyricsInput" required placeholder="Paste or type the lyrics here..."></textarea>
+        </label>
+
+        <div class="actions">
+          <button type="button" class="secondary" id="cancelBtn">Cancel</button>
+          <button type="submit" class="primary" id="saveBtn">Save Song</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal hidden" id="viewModal">
+    <article class="modal-card lyrics-card">
+      <div class="modal-head">
+        <div>
+          <p class="eyebrow">SONG</p>
+          <h2 id="viewTitle"></h2>
+          <p id="viewArtist" class="artist"></p>
+        </div>
+        <button class="icon-btn" id="closeView">×</button>
+      </div>
+
+      <div id="viewLyrics" class="lyrics"></div>
+
+      <div class="actions">
+        <button class="secondary" id="editBtn">✎ Edit</button>
+        <button class="danger" id="deleteBtn">Delete</button>
+      </div>
+    </article>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
