@@ -154,7 +154,7 @@ async function saveSong(event) {
   event.preventDefault();
 
   const payload = {
-    title: $("titleInput").value.trim(),
+    title: $("titleInput").value.trim().toUpperCase(),
     artist: $("artistInput").value.trim() || "Unknown artist",
     lyrics: $("lyricsInput").value.trim()
   };
